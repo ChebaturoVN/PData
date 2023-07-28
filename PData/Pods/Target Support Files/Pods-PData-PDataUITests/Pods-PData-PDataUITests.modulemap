@@ -1,0 +1,6 @@
+framework module Pods_PData_PDataUITests {
+  umbrella header "Pods-PData-PDataUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
