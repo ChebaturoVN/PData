@@ -20,7 +20,7 @@ final class ButtonFooterCell: UITableViewHeaderFooterView {
         button.layer.cornerRadius = 25
         button.layer.borderColor = UIColor.red.cgColor
         button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 40, bottom: 8, right: 40)
-        button.addTarget(self, action: #selector(buttonTap), for: .touchUpInside)
+
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -29,6 +29,8 @@ final class ButtonFooterCell: UITableViewHeaderFooterView {
     init(frame: CGRect) {
         super.init(reuseIdentifier: nil)
         self.frame = frame
+
+        button.addTarget(self, action: #selector(clearButtonTap), for: .touchUpInside)
         setupLayout()
     }
 
@@ -40,7 +42,7 @@ final class ButtonFooterCell: UITableViewHeaderFooterView {
         button.isHidden = buttonIsHedden
     }
 
-    @objc private func buttonTap() {
+    @objc private func clearButtonTap() {
         clearButtonTapped?()
     }
 
@@ -50,7 +52,7 @@ final class ButtonFooterCell: UITableViewHeaderFooterView {
         button.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().inset(50)
         }
     }
 }

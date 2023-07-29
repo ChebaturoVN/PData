@@ -31,6 +31,10 @@ final class CustomTextField: UIView {
         inputTextField.text = ""
     }
 
+    public func clearInputText() {
+        inputTextField.text = ""
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

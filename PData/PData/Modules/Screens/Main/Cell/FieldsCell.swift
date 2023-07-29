@@ -104,3 +104,10 @@ final class FieldsCell: UITableViewCell {
     }
 
 }
+
+extension FieldsCell: MainViewModelImplDelegate {
+    func clearAll() {
+        nameTextField.clearInputText()
+        ageTextField.clearInputText()
+    }
+}

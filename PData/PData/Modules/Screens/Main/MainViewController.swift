@@ -16,7 +16,7 @@ final class MainViewController: UIViewController {
     private var viewModel: MainViewModel
 
     private let tableView = UITableView(frame: .zero, style: .plain)
-    private let footer = ButtonFooterCell(frame: CGRect(x: 0, y: 0, width: Constants.widthHeader, height: 50))
+    private let footer = ButtonFooterCell(frame: CGRect(x: 0, y: 0, width: Constants.widthHeader, height: 100))
 
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
@@ -42,11 +42,11 @@ final class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
 
         tableView.register(FieldsCell.self, forCellReuseIdentifier: FieldsCell.idCell)
         footer.clearButtonTapped = { [weak self] in
-            self?.viewModel.childrenModul = []
-            self?.uptateTable()
+            self?.viewModel.alert()
         }
     }
 
@@ -73,10 +73,16 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         let headerView = MainHeaderCell(frame: CGRect(x: 0, y: 0, width: MainViewController.Constants.widthHeader, height: 50))
 
         if section < 1 {
-            headerView.configure("Персональные данные", buttonIsHedden: true)
+            headerView.configure(
+                "Персональные данные",
+                buttonIsHedden: true
+            )
             return headerView
         } else {
-            headerView.configure("Дети (макс. 5)", buttonIsHedden: false)
+            headerView.configure(
+                "Дети (макс. 5)",
+                buttonIsHedden: self.viewModel.childrenModul.count > 4 ? true : false
+            )
             headerView.addButtonTapped = { [weak self] in
                 self?.viewModel.addChildren()
             }
