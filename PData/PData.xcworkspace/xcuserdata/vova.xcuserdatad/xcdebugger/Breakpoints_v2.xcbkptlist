@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CB694032-F73C-4C66-B7FE-F6E40EF7DEBD"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7770FC93-49D6-459F-8125-7A475EB484AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PData/Modules/Screens/Main/Cell/FieldsCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "configureCell(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7770FC93-49D6-459F-8125-7A475EB484AC - 9e1b29b30876d935"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SnapKit.ConstraintMaker) -&gt; () in PData.FieldsCell.configureCell(name: PData.ModelTextField, age: PData.ModelTextField, delButton: Swift.Bool) -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/Cell/FieldsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "476">
+               </Location>
+               <Location
+                  uuid = "7770FC93-49D6-459F-8125-7A475EB484AC - 9e1b29b30876d935"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SnapKit.ConstraintMaker) -&gt; () in PData.FieldsCell.configureCell(name: PData.ModelTextField, age: PData.ModelTextField, delButton: Swift.Bool) -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/Cell/FieldsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "532">
+               </Location>
+               <Location
+                  uuid = "7770FC93-49D6-459F-8125-7A475EB484AC - 7812f85e498f77f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SnapKit.ConstraintMaker) -&gt; () in PData.FieldsCell.configureCell(PData.ChildrenModul) -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/Cell/FieldsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "532">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7164B216-E38B-483D-AA21-2F597116CD4A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PData/Modules/Screens/Main/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "deleteCell(_:at:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7164B216-E38B-483D-AA21-2F597116CD4A - 11890321287d403"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PData.MainViewModelImpl.deleteCell(_: __C.UITableView, at: Swift.Int) -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "7164B216-E38B-483D-AA21-2F597116CD4A - 11890321287d403"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PData.MainViewModelImpl.deleteCell(_: __C.UITableView, at: Swift.Int) -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "076E99D5-B37A-49EB-9EC0-9B8C98C1B59B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PData/Modules/Screens/Main/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "addChildren()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "076E99D5-B37A-49EB-9EC0-9B8C98C1B59B - 5ab675c8dae917d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PData.MainViewModelImpl.addChildren() -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "076E99D5-B37A-49EB-9EC0-9B8C98C1B59B - 5ab675c8dae917d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PData.MainViewModelImpl.addChildren() -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "076E99D5-B37A-49EB-9EC0-9B8C98C1B59B - 5ab675c8dae917d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PData.MainViewModelImpl.addChildren() -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "26E6C079-AF27-466F-9648-9B1CCAC1A62D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PData/Modules/Screens/Main/Cell/FieldsCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "buttonTap()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "26E6C079-AF27-466F-9648-9B1CCAC1A62D - c84ce736a56a2752"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PData.FieldsCell.buttonTap() -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/Cell/FieldsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "26E6C079-AF27-466F-9648-9B1CCAC1A62D - c84ce736a56a20b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PData.FieldsCell.buttonTap() -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/Cell/FieldsCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "922E7D00-3292-43F0-97BB-1D04B0D0BE52"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PData/Modules/Screens/Main/Cell/MainHeaderCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "setupUI()"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "922E7D00-3292-43F0-97BB-1D04B0D0BE52 - 3710a32b9e30033a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PData.MainHeaderCell.setupUI() -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/Cell/MainHeaderCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "922E7D00-3292-43F0-97BB-1D04B0D0BE52 - 3710a32b9e30033a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PData.MainHeaderCell.setupUI() -&gt; ()"
+                  moduleName = "PData"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vova/Documents/GitHub-project/PData/PData/PData/Modules/Screens/Main/Cell/MainHeaderCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "244">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
