@@ -9,9 +9,8 @@ import Foundation
 import UIKit
 
 struct ChildrenModul {
-    let name: ModelTextField
-    let age: ModelTextField
-    let delButton: Bool
+    var person: FieldsCellModel
+    var delButton: Bool
 }
 
 protocol MainViewModel {
@@ -34,6 +33,7 @@ final class MainViewModelImpl: MainViewModel {
 
     weak var delegate: MainViewModelImplDelegate?
 
+    var parentModul: ChildrenModul = .init(person: .init(name: "", age: ""), delButton: true)
     var childrenModul = [ChildrenModul]()
 
     func alert() {
@@ -59,48 +59,76 @@ final class MainViewModelImpl: MainViewModel {
 
     func addChildren() {
         childrenModul.append(
-            .init(
-                name: .init(nameTitle: "Имя",
-                            placeholder: "Заполнить"),
-                age: .init(nameTitle: "Возраст",
-                           placeholder: "Заполнить"),
-                delButton: false)
+            .init(person: .init(name: "", age: "", tag: childrenModul.count ), delButton: false)
         )
         view?.uptateTable()
     }
 
     func configurationTable(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
         let cell = tableView.dequeueReusableCell(withIdentifier: FieldsCell.idCell, for: indexPath) as? FieldsCell ?? FieldsCell()
+        delegate = cell
         if indexPath.section == 0 {
-            cell.configureCell(.init(
-                name: .init(nameTitle: "Имя",
-                            placeholder: "Заполнить"),
-                age: .init(nameTitle: "Возраст",
-                           placeholder: "Заполнить"),
-                delButton: true)
-            )
-            delegate = cell
+            cell.configureCell(parentModul)
+
         } else if !childrenModul.isEmpty && indexPath.section == 1 {
             cell.configureCell(childrenModul[indexPath.row])
+
+
         }
+        cell.delegate = self
+
         cell.separator.isHidden = (indexPath.row == childrenModul.count - 1 || indexPath.section == 0) ? true : false
-        cell.tag = indexPath.row
-        cell.delButtonTapped = { [weak self] tag in
-            self?.deleteCell(tableView, at: tag)
+        cell.indexPathCell = indexPath
+        cell.delButtonTapped = { [weak self] indexPath in
+            guard let indexPath = indexPath else { return }
+            self?.deleteCell(tableView, at: indexPath)
         }
         return cell
     }
 
-    private func deleteCell(_ tableView: UITableView, at row: Int) {
-        childrenModul.remove(at: row)
-        tableView.deleteRows(at: [IndexPath(row: row, section: 1)], with: .fade)
+    private func deleteCell(_ tableView: UITableView, at indexPath: IndexPath) {
+        
+        childrenModul.remove(at: indexPath.row)
+        childrenModul.enumerated().forEach { index, child in
+            if let tag = child.person.tag, tag > indexPath.row {
+                childrenModul[index].person.tag = tag - 1
+            }
+        }
+        tableView.deleteRows(at: [indexPath], with: .fade)
+
         view?.uptateTable()
     }
 
     private func clearData() {
         delegate?.clearAll()
         childrenModul = []
+        parentModul = .init(person: .init(name: "", age: ""), delButton: true)
         view?.uptateTable()
     }
 
+}
+
+extension MainViewModelImpl: FieldsCellDelegate {
+
+    func textFieldDidChange(_ indexPath: IndexPath?, name: String?) {
+        if let indexPath = indexPath,
+           indexPath.section > 0 {
+            childrenModul[indexPath.row].person.name = name ?? ""
+        } else if let indexPath = indexPath,
+                  indexPath.section ==  0 {
+            parentModul.person.name = name ?? ""
+
+        }
+    }
+
+    func textFieldDidChange(_ indexPath: IndexPath?, age: String?) {
+        if let indexPath = indexPath,
+           indexPath.section > 0 {
+            childrenModul[indexPath.row].person.age = age ?? ""
+        } else if let indexPath = indexPath,
+                  indexPath.section ==  0 {
+            parentModul.person.age = age ?? ""
+
+        }
+    }
 }

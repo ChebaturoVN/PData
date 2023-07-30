@@ -8,11 +8,28 @@
 import UIKit
 import SnapKit
 
+struct FieldsCellModel {
+    var name: String
+    var age: String
+    var tag: Int?
+}
+
+protocol FieldsCellDelegate: AnyObject {
+    func textFieldDidChange(_ indexPath: IndexPath?, name: String?)
+    func textFieldDidChange(_ indexPath: IndexPath?, age: String?)
+}
+
 final class FieldsCell: UITableViewCell {
 
     static let idCell = "FieldsCell"
 
-    var delButtonTapped: ((Int) -> Void)?
+    weak var delegate: FieldsCellDelegate?
+
+    var indexPathCell: IndexPath?
+
+    var delButtonTapped: ((IndexPath?) -> Void)?
+
+    private var model: FieldsCellModel = .init(name: "", age: "", tag: nil)
 
     private let nameTextField: CustomTextField = {
         let textField = CustomTextField(frame: CGRect())
@@ -52,10 +69,21 @@ final class FieldsCell: UITableViewCell {
         setUpLayout()
     }
 
-    func configureCell(_ modul: ChildrenModul) {
-        nameTextField.configure(model: modul.name)
-        ageTextField.configure(model: modul.age)
-        deleteButton.isHidden = modul.delButton
+    func configureCell(_ textInput: ChildrenModul) {
+
+        nameTextField.configure(model: .init(
+            nameTitle: "Имя",
+            placeholder: "Заполнить",
+            textInput: textInput.person.name),
+                                type: .name
+        )
+        ageTextField.configure(model: .init(
+            nameTitle: "Возраст",
+            placeholder: "Заполнить",
+            textInput: textInput.person.age),
+                               type: .age
+        )
+        deleteButton.isHidden = textInput.delButton
 
         deleteButton.snp.updateConstraints { make in
             make.width.equalTo(deleteButton.isHidden ? 0 : UIScreen.main.bounds.width / 2 - 80)
@@ -64,10 +92,13 @@ final class FieldsCell: UITableViewCell {
     }
 
     @objc private func buttonTap() {
-        delButtonTapped?(self.tag)
+        delButtonTapped?(indexPathCell)
     }
 
     private func setUpUI() {
+
+        nameTextField.delegate = self
+        ageTextField.delegate = self
 
         deleteButton.titleLabel?.textAlignment = .right
         self.contentView.addSubviews(nameTextField, ageTextField, deleteButton, separator)
@@ -109,5 +140,17 @@ extension FieldsCell: MainViewModelImplDelegate {
     func clearAll() {
         nameTextField.clearInputText()
         ageTextField.clearInputText()
+    }
+}
+
+extension FieldsCell: CustomTextFieldDelegate {
+    func textFieldDidChange(text: String?, type: TextFieldType) {
+        switch type {
+        case .name:
+            delegate?.textFieldDidChange(indexPathCell, name: text)
+        case .age:
+            delegate?.textFieldDidChange(indexPathCell, age: text)
+
+        }
     }
 }
